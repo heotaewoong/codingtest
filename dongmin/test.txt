@@ -1,3 +1,18 @@
 ## 2941
+import sys
+from collections import deque
 
+input = sys.stdin.readline
+ans=[]
+N=int(input())
+lst=list(map(int,input().split()))
+dq=deque((i+1,lst[i]) for i in range(N))
 
+while dq:
+    idx, k = dq.popleft()
+    ans.append(idx)
+        if k>0:
+            dq.rotate(-(k-1))
+        else: 
+            dq.rotate(k)
+print(*ans)
