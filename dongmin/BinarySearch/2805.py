@@ -1,14 +1,19 @@
 import sys
-import math
 input = sys.stdin.readline
 
-N=list(map(int,input().split()))
-HIGHT=list(map(int,input().split()))
-k=N[1]
+N, M = map(int, input().split())
+trees = list(map(int, input().split()))
 
+lo, hi =0 ,max(trees)
+ans=0 
 
+while lo <= hi:
+    mid = (lo + hi) //2
+    got=sum([x-mid for x in trees if x> mid])
+    if got >= M:
+        ans = mid
+        lo = mid + 1
+    else:
+        hi = mid - 1
 
-
-
-top=(sum(HIGHT)-k)/N[0]
-print(math.floor(top))
+print(ans)
