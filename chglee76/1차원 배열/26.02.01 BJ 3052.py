@@ -1,7 +1,7 @@
-'A%B' = set()
+AperB = set()
 
 for i in range(10) :
     A = int(input())
-    'A%B'.add(A % 42)
+    AperB.add(A % 42)
 
-print(len('A%B'))
+print(len(AperB))
