@@ -1,8 +1,8 @@
 A, B = input().split()
-reversed_A = int(A[::-1])
-reversed_B = int(B[::-1])
+rev_A = int(A[::-1])
+rev_B = int(B[::-1])
 
-if reversed_A > reversed_B :
-    print(reversed_A)
+if rev_A > rev_B :
+    print(rev_A)
 else :
-    print(reversed_B)
+    print(rev_B)
