@@ -7,5 +7,4 @@ for i in range(number) :
         for k in range(y, y+10) :
             A.append((j, k))
 
-print(A)
 print(len(set(A)))
